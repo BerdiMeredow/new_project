@@ -1,0 +1,8 @@
+stages:
+  test
+test-etmek:
+  stage: test
+  image: Alpine: latest
+  script:
+    -echo "google ping ugradylyar"
+    -ping -c 4 google.com
