@@ -1,0 +1,10 @@
+name: Google Ping Test
+
+on: [push] # Kody ugradanyňyzda işleýär
+
+jobs:
+  ping-test:
+    runs-on: ubuntu-latest # Iň täze Linux-da işleýär
+    steps:
+      - name: Google-a ping ugrat
+        run: ping -c 4 google.com
