@@ -1,13 +1,24 @@
-name: My first CI
+name: My First CI
 
-on: push
+on:
+  push:
 
 jobs:
-  hello:
+  connect:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello, world!"
+      - name: Install sshpass
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass
 
+      - name: Download Project
+        env:
+          SSHPASS: ${{ secrets.gizlin }}
+        run: |
+          sshpass -e ssh \
+            -o StrictHostKeyChecking=accept-new \
+            root@sapak.tejribe.online \
+            "git clone https://github.com/USERNAME/REPOSITORY.git /var/www/myproject"
 
