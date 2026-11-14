@@ -15,10 +15,10 @@ jobs:
 
       - name: Download Project
         env:
-          SSHPASS: ${{ secrets.gizlin }}
+          SSHPASS: ${{ secrets.zdTEPMqLXV93 }}
         run: |
           sshpass -e ssh \
             -o StrictHostKeyChecking=accept-new \
-            root@sapak.tejribe.online \
-            "git clone https://github.com/USERNAME/REPOSITORY.git /var/www/myproject"
+            root@45.61.176.113 \
+            " git clone https://github.com/BerdiMeredow/new_project.git"
 
