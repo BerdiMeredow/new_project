@@ -15,7 +15,7 @@ jobs:
 
       - name: Download Project
         env:
-          SSHPASS: ${{ secrets.zdTEPMqLXV93 }}
+          SSHPASS: ${{ secrets.gizlin }}
         run: |
           sshpass -e ssh \
             -o StrictHostKeyChecking=accept-new \
